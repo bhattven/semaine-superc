@@ -92,4 +92,16 @@ Puis http://localhost:8787 (le service worker exige `localhost` ou HTTPS).
 
 ## Déploiement
 
-GitHub Pages sert la branche `main` à la racine. Un `git push` suffit ; aucun build.
+En ligne : <https://bhattven.github.io/semaine-superc/>
+Dépôt : `bhattven/semaine-superc` (public, branche `main`).
+
+GitHub Pages sert `main` à la racine. Un `git push` suffit ; aucun build, aucune action
+à lancer. Compter ~40 s avant que le changement soit visible.
+
+## Super C — ne pas automatiser le panier
+
+Le bouton ouvre simplement la circulaire. Le remplissage automatique du panier sur
+superc.ca a été tenté une fois et n'a fonctionné que sous supervision pas à pas : le site
+déclenche une vérification anti-robot quand les actions s'enchaînent vite, et une modale
+invisible a avalé plusieurs clics « ajouter au panier » sans le moindre message d'erreur.
+Une automatisation non surveillée échouerait donc en silence. Ne pas en ajouter une ici.
