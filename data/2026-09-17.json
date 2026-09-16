@@ -1,0 +1,251 @@
+{
+  "id": "2026-09-17",
+  "from": "2026-09-17",
+  "to": "2026-09-23",
+  "eyebrow": "Super C · circulaire du 17 au 23 septembre 2026",
+  "title": "Semaine franco-asiatique",
+  "intro": "Quatorze repas — midi et soir, sept jours — entre bistrot français et cuisine asiatique, bâtis autour des spéciaux de la circulaire. Un poulet entier et une longe de porc servent chacun trois fois, et les soupers fabriquent les lunchs du lendemain.",
+  "portions": 28,
+  "notesTop": [
+    "<strong>Achète la longe de porc jeudi ou vendredi</strong> — le 1,94 $/lb est une aubaine de deux jours seulement. Demande au boucher de la couper en deux : quatre côtelettes pour dimanche, le reste en lanières pour le sauté de lundi (congèle les lanières dès l'achat si tu es jeudi — vois la note ❄️ dans la recette).",
+    "<strong>Prends le plus gros poulet entier du bac</strong> — il nourrit 4 repas (jeudi soir, vendredi midi, samedi soir, dimanche midi), alors un petit poulet donnerait des portions justes. À 2,25 $/lb, chaque livre de plus ne coûte presque rien. S'il n'y en a pas de gros, ajoute un paquet de poitrines ou hauts de cuisses pour épauler le souper de samedi."
+  ],
+  "notesBottom": [
+    "<strong>Avant de partir</strong> — la liste suppose que tu as déjà sel, poivre, herbes séchées, sucre, farine, mayonnaise et moutarde. La moutarde, le relish et la sauce BBQ sont d'ailleurs à 0,99 $ cette semaine si tu es à sec."
+  ],
+  "footer": "Prix marqués « spécial » tirés de la circulaire Super C du 17 au 23 septembre 2026 ; les autres sont des prix courants approximatifs et peuvent varier d'une succursale à l'autre. Total avant taxes.",
+  "list": [
+    {
+      "name": "Viande, volaille, poisson",
+      "items": [
+        { "id": "poulet", "what": "Poulet entier frais", "qty": "prends le plus gros du bac (≈ 5–5,5 lb) — poché jeudi, sert au gỏi gà et au poulet à la moutarde", "price": 11.81, "unit": "2,25 $/lb", "sp": true },
+        { "id": "hautscuisses", "what": "Hauts de cuisses de poulet", "qty": "≈ 0,75 lb — dés pour le général tao", "price": 5.99, "unit": "7,99 $/lb", "sp": true },
+        { "id": "porc", "what": "Longe de porc entière désossée", "qty": "≈ 4 lb — 4 côtelettes + lanières à sauté", "price": 7.76, "unit": "1,94 $/lb", "sp": true },
+        { "id": "sole", "what": "Filet de sole frais", "qty": "≈ 0,7 lb — souper de mercredi", "price": 6.99, "unit": "9,99 $/lb", "sp": true }
+      ]
+    },
+    {
+      "name": "Fruits et légumes",
+      "items": [
+        { "id": "poivrons", "what": "Poivrons rouges, jaunes ou orange", "qty": "≈ 3 lb — omelette, sauté, général tao, riz frit", "price": 3.75, "unit": "1,25 $/lb", "sp": true },
+        { "id": "oignons", "what": "Oignons jaunes", "qty": "sac de 3 lb", "price": 2.99, "unit": "", "sp": true },
+        { "id": "ail", "what": "Ail", "qty": "1 tête", "price": 1.29, "unit": "prix courant", "sp": false },
+        { "id": "gingembre", "what": "Gingembre frais", "qty": "un morceau (≈ 100 g)", "price": 1.29, "unit": "prix courant", "sp": false },
+        { "id": "oignonsverts", "what": "Oignons verts", "qty": "1 botte", "price": 1.49, "unit": "prix courant", "sp": false },
+        { "id": "coriandre", "what": "Coriandre fraîche", "qty": "1 bouquet — gỏi gà", "price": 1.99, "unit": "prix courant", "sp": false },
+        { "id": "carottes", "what": "Carottes", "qty": "sac de 2 lb — julienne pour la salade, glacées pour la sole", "price": 2.29, "unit": "prix courant", "sp": false },
+        { "id": "romaine", "what": "Cœurs de laitue romaine bio", "qty": "1 paquet de 3", "price": 1.97, "unit": "", "sp": true },
+        { "id": "concombres", "what": "Mini concombres Toundra bio", "qty": "1 paquet de 6", "price": 1.97, "unit": "", "sp": true },
+        { "id": "patates", "what": "Pommes de terre jaunes", "qty": "sac de 5 lb — gratin dauphinois", "price": 4.49, "unit": "prix courant", "sp": false },
+        { "id": "brocoli", "what": "Brocoli", "qty": "2 têtes", "price": 3.98, "unit": "prix courant", "sp": false },
+        { "id": "citrons", "what": "Citrons", "qty": "2 — sole meunière et vinaigrette du gỏi gà", "price": 1.50, "unit": "prix courant", "sp": false }
+      ]
+    },
+    {
+      "name": "Laitiers et œufs",
+      "items": [
+        { "id": "oeufs", "what": "Œufs blancs Selection", "qty": "1 douzaine", "price": 3.88, "unit": "", "sp": true },
+        { "id": "fromage", "what": "Fromage P'tit Québec", "qty": "bloc de 400 g — omelette et gratin", "price": 5.47, "unit": "", "sp": true },
+        { "id": "creme", "what": "Crème 15 %", "qty": "500 ml — gratin dauphinois et sauce à la moutarde", "price": 3.99, "unit": "prix courant", "sp": false },
+        { "id": "beurre", "what": "Beurre", "qty": "454 g", "price": 5.49, "unit": "prix courant", "sp": false }
+      ]
+    },
+    {
+      "name": "Épicerie et garde-manger",
+      "items": [
+        { "id": "riz", "what": "Riz à grain long", "qty": "2 kg", "price": 5.49, "unit": "prix courant", "sp": false },
+        { "id": "soya", "what": "Sauce soya", "qty": "296 ml", "price": 3.49, "unit": "prix courant", "sp": false },
+        { "id": "sesame", "what": "Huile de sésame grillé", "qty": "petite bouteille — finition du sauté", "price": 4.99, "unit": "prix courant", "sp": false },
+        { "id": "vinaigre", "what": "Vinaigre de riz", "qty": "250 ml — sauce du général tao et vinaigrette", "price": 3.29, "unit": "prix courant", "sp": false },
+        { "id": "fecule", "what": "Fécule de maïs", "qty": "250 g — général tao croustillant", "price": 2.29, "unit": "prix courant", "sp": false },
+        { "id": "pain", "what": "Pain tranché de blé entier", "qty": "1 miche — sandwich du dimanche", "price": 3.29, "unit": "prix courant", "sp": false },
+        { "id": "huile", "what": "Huile d'olive", "qty": "500 ml — saute-le si ton flacon est plein", "price": 7.99, "unit": "prix courant", "sp": false }
+      ]
+    }
+  ],
+  "menu": [
+    {
+      "day": "Jeudi", "num": "17 sept.",
+      "midi": { "n": "Omelette aux poivrons et fromage", "h": "Trois œufs, poivrons, fromage P'tit Québec, salade verte. Léger avant de commencer la semaine." },
+      "soir": { "n": "Gỏi gà — salade vietnamienne au poulet", "h": "Poulet entier poché aujourd'hui, effiloché, sur romaine et carottes en julienne, coriandre, vinaigrette citron-soya-ail. Garde le bouillon et une partie du poulet. ❄️ Le 2e poulet du format économique n'est pas utilisé cette semaine : congèle-le tout de suite en rentrant. — Vietnam" }
+    },
+    {
+      "day": "Vendredi", "num": "18 sept.",
+      "midi": { "n": "Soupe rapide au poulet et au riz", "h": "Le bouillon réservé, un reste de poulet effiloché, un peu de riz, oignon vert.", "lo": "restes" },
+      "soir": { "n": "Général tao maison", "h": "Dés de hauts de cuisses en croûte de fécule, frits, sauce soya-vinaigre-gingembre-ail sucrée, sur riz. Poulet cru cuisiné le lendemain de l'achat — aucune congélation requise. — Chine" }
+    },
+    {
+      "day": "Samedi", "num": "19 sept.",
+      "midi": { "n": "Restes de général tao sur riz", "h": "Réchauffé, avec un reste de carottes ou concombre.", "lo": "restes" },
+      "soir": { "n": "Poulet à la moutarde et à la crème", "h": "Le reste du poulet poché de jeudi (poulet déjà cuit, encore bon 2-3 jours), réchauffé dans une sauce moutarde-crème. Riz ou pain pour saucer. — France" }
+    },
+    {
+      "day": "Dimanche", "num": "20 sept.",
+      "midi": { "n": "Restes de poulet à la moutarde sur pain grillé", "h": "Réchauffé, avec un reste de romaine.", "lo": "restes" },
+      "soir": { "n": "Côtelettes de porc à la dijonnaise", "h": "Sauce moutarde-crème, gratin dauphinois, brocoli vapeur. Porc cru acheté jeudi ou vendredi : à ce stade (2-3 jours), encore bien dans la fenêtre de fraîcheur. — France" }
+    },
+    {
+      "day": "Lundi", "num": "21 sept.",
+      "midi": { "n": "Sandwich au porc froid, moutarde à l'ancienne", "h": "Restes de côtelette tranchée, moutarde, romaine, mini concombres.", "lo": "restes" },
+      "soir": { "n": "Porc sauté au gingembre et soya", "h": "Lanières de longe, poivrons, oignon, ail, gingembre, sur riz. Cuis le double de riz pour mardi. ❄️ Si la longe a été achetée jeudi, ces lanières sont à leur 4e-5e jour : congèle-les dès l'achat et fais-les décongeler au frigo dimanche soir. — Chine/Asie du Sud-Est" }
+    },
+    {
+      "day": "Mardi", "num": "22 sept.",
+      "midi": { "n": "Restes du sauté de porc sur riz", "h": "Réchauffé, avec un reste de carottes ou concombre.", "lo": "restes" },
+      "soir": { "n": "Riz frit cantonais", "h": "Le riz cuit en double lundi, poivrons, carottes, oignon vert, deux œufs, sauce soya. — Chine" }
+    },
+    {
+      "day": "Mercredi", "num": "23 sept.",
+      "midi": { "n": "Restes de riz frit", "h": "Réchauffé, un œuf au miroir par-dessus si le cœur t'en dit.", "lo": "restes" },
+      "soir": { "n": "Sole meunière", "h": "Filets poêlés au beurre, jus de citron, riz, carottes glacées au beurre. ❄️ La sole est vendue surgelée : garde-la au congélateur jusqu'à hier soir (mardi), décongelée au frigo pour ce soir. — France (classique)" }
+    }
+  ],
+  "conservation": [
+    {
+      "name": "Poulet entier (rôti/poché)", "badge": "freeze", "badgeLabel": "vérifie le 2e poulet",
+      "timeline": "Acheté et poché jeudi · reste cuit utilisé jusqu'à samedi soir",
+      "action": "Poché le jour même de l'achat — pas de risque. Le poulet <strong>cuit</strong> se garde 2–3 jours au frigo, donc le reste tient jusqu'à samedi. Si le format économique contient un <strong>2e poulet non utilisé</strong> cette semaine, congèle-le tout de suite en rentrant : le poulet cru ne se garde que 1–2 jours au frigo."
+    },
+    {
+      "name": "Hauts de cuisses de poulet (général tao)", "badge": "ok", "badgeLabel": "pas de congélation",
+      "timeline": "Acheté jeudi ou vendredi · cuisiné vendredi soir",
+      "action": "Cru, cuisiné en 24–48 h après l'achat — bien dans la fenêtre sécuritaire pour du poulet cru. Garde-le simplement au frigo, aucune congélation nécessaire."
+    },
+    {
+      "name": "Longe de porc — côtelettes (dijonnaise)", "badge": "ok", "badgeLabel": "à cuire d'ici dimanche",
+      "timeline": "Achetée jeudi ou vendredi · côtelettes cuisinées dimanche soir",
+      "action": "Cru, à 2–3 jours au moment de la cuisson — encore bien dans la fenêtre de fraîcheur (le porc cru se garde 3–5 jours au frigo). Ne dépasse pas dimanche pour ces morceaux."
+    },
+    {
+      "name": "Longe de porc — lanières (sauté)", "badge": "freeze", "badgeLabel": "congélation recommandée",
+      "timeline": "Achetée jeudi ou vendredi · lanières cuisinées lundi soir",
+      "action": "Si la longe a été achetée <strong>jeudi</strong>, les lanières seraient à leur 4e–5e jour lundi — à la limite. <strong>Congèle-les dès le retour du magasin</strong> (sépare-les des côtelettes avant), puis fais-les décongeler au frigo à partir de dimanche soir pour lundi."
+    },
+    {
+      "name": "Filets de sole", "badge": "freeze", "badgeLabel": "décongélation prévue",
+      "timeline": "Vendue déjà surgelée · cuisinée mercredi soir",
+      "action": "Garde-la au congélateur jusqu'à <strong>mardi soir</strong>, puis transfère-la au frigo pour une décongélation lente (jamais sur le comptoir ni à l'eau chaude). Cuisine-la le lendemain, mercredi."
+    }
+  ],
+  "recipes": [
+    {
+      "t": "Jeudi midi — Omelette aux poivrons et fromage",
+      "s": [
+        "Bats trois œufs avec une pincée de sel et de poivre.",
+        "Fais revenir quelques lamelles de poivrons dans un peu de beurre <strong>2–3 minutes</strong> à feu moyen.",
+        "Verse les œufs, laisse prendre à feu moyen-doux <strong>2–3 minutes</strong>, ajoute le fromage en tranches, plie l'omelette en deux dès qu'il commence à fondre.",
+        "Sers avec un peu de salade verte à côté — repas léger avant de partir la semaine."
+      ]
+    },
+    {
+      "t": "Jeudi — Gỏi gà (salade vietnamienne au poulet)",
+      "s": [
+        "Dépose le poulet entier dans une grande casserole, couvre d'eau froide, ajoute un oignon coupé en deux et un morceau de gingembre écrasé. Porte à ébullition puis baisse à petit frémissement <strong>45 à 55 minutes</strong>, jusqu'à ce que le jus soit clair près de l'os.",
+        "Sors le poulet, laisse-le tiédir, puis effiloche la chair à la main ou à la fourchette. <strong>Réserve le bouillon</strong> et une bonne partie du poulet pour samedi (il reste bon 2–3 jours au frigo, bien couvert).",
+        "❄️ Si tu as un deuxième poulet du format économique, ne le laisse pas traîner : <strong>congèle-le tout de suite</strong> en rentrant, il ne sert pas cette semaine.",
+        "Vinaigrette : jus d'un citron, 2 c. à soupe de sauce soya, une gousse d'ail écrasée, une pincée de sucre — fouette et goûte, ça doit piquer un peu.",
+        "Romaine émincée, carottes en julienne, la moitié du poulet effiloché, coriandre ciselée : mélange avec la vinaigrette juste avant de servir pour que la laitue reste croquante."
+      ]
+    },
+    {
+      "t": "Vendredi midi — Soupe rapide au poulet et au riz",
+      "s": [
+        "Réchauffe le bouillon réservé de jeudi dans une casserole.",
+        "Ajoute un reste de poulet effiloché et un peu de riz cuit (ou une petite poignée de riz cru cuit directement dans le bouillon <strong>12–15 minutes</strong> si tu n'as pas de restes).",
+        "Laisse mijoter <strong>3–4 minutes</strong>, parsème d'oignon vert émincé, rectifie le sel au goût."
+      ]
+    },
+    {
+      "t": "Vendredi — Général tao maison",
+      "s": [
+        "Coupe les hauts de cuisses en cubes, enrobe-les de fécule de maïs. Poulet cru acheté hier ou aujourd'hui : cuisiné dans les 24–48 h, pas besoin de congeler.",
+        "Huile chaude à feu moyen-vif : fais-les dorer <strong>3–4 minutes par côté</strong> sans trop les bouger, jusqu'à ce qu'ils soient croustillants. Réserve sur une assiette.",
+        "Sauce dans la même poêle essuyée : 2 c. à soupe de sauce soya, 1 c. à soupe de vinaigre de riz, une pincée de sucre, ail et gingembre émincés, un peu d'eau. Amène à petit bouillon <strong>1 minute</strong>.",
+        "Remets le poulet dans la sauce, enrobe bien <strong>30 secondes</strong> à feu vif pour qu'il reste croustillant, sers immédiatement sur le riz."
+      ]
+    },
+    {
+      "t": "Samedi midi — Restes de général tao sur riz",
+      "s": [
+        "Réchauffe les restes de général tao et le riz à la poêle à feu moyen (ou au micro-ondes).",
+        "Sers avec un reste de carottes ou de concombre en accompagnement frais."
+      ]
+    },
+    {
+      "t": "Samedi — Poulet à la moutarde et à la crème",
+      "s": [
+        "Fais suer un oignon haché dans le beurre <strong>5 minutes</strong> à feu moyen.",
+        "Ajoute le reste du poulet poché de jeudi en morceaux, réchauffe doucement <strong>3–4 minutes</strong> — il est déjà cuit, il ne s'agit que de le tiédir sans le dessécher.",
+        "Baisse le feu, verse la crème et 2 c. à soupe de moutarde à l'ancienne, mélange. Laisse à peine frémir <strong>2–3 minutes</strong> : la crème ne doit jamais bouillir fort, elle trancherait.",
+        "Sale, poivre, sers sur du riz ou avec du pain pour saucer."
+      ]
+    },
+    {
+      "t": "Dimanche midi — Restes de poulet à la moutarde sur pain grillé",
+      "s": [
+        "Fais griller deux tranches de pain.",
+        "Réchauffe doucement le reste de poulet à la moutarde à la poêle ou au micro-ondes.",
+        "Verse sur le pain grillé, avec un reste de romaine à côté."
+      ]
+    },
+    {
+      "t": "Dimanche — Côtelettes de porc à la dijonnaise",
+      "s": [
+        "Pommes de terre en fines tranches (mandoline si tu en as une), disposées en couches dans un plat beurré avec l'ail émincé, sel, poivre, et la crème versée entre les couches.",
+        "Four à <strong>190 °C (375 °F)</strong>, couvert de papier d'aluminium <strong>30 minutes</strong>, puis à découvert <strong>15–20 minutes</strong> de plus jusqu'à ce que le dessus dore.",
+        "Côtelettes salées, poêlées à feu moyen-vif <strong>4 minutes par côté</strong>, repos 5 minutes hors du feu. Porc cru acheté jeudi ou vendredi : à 2–3 jours, encore bien dans la fenêtre de fraîcheur.",
+        "Déglace la poêle avec un peu de crème et une cuillère de moutarde pour une sauce minute. Brocoli vapeur <strong>5 minutes</strong> en accompagnement."
+      ]
+    },
+    {
+      "t": "Lundi midi — Sandwich au porc froid, moutarde à l'ancienne",
+      "s": [
+        "Tranche finement le reste de côtelette de porc froide.",
+        "Tartine le pain de moutarde à l'ancienne, garnis de porc, de romaine et de mini concombres."
+      ]
+    },
+    {
+      "t": "Lundi — Porc sauté au gingembre et soya",
+      "s": [
+        "❄️ Si la longe a été achetée jeudi, ces lanières sont à leur 4e–5e jour : congèle-les dès l'achat et fais-les décongeler au frigo dès dimanche soir pour ce soir.",
+        "Mets <strong>2 tasses de riz</strong> à cuire — le double : la moitié servira mardi pour le riz frit.",
+        "Tranche les lanières de porc très finement, contre le grain. Coupe tous les légumes avant d'allumer le feu : un sauté va vite.",
+        "Poêle ou wok très chaud, un peu d'huile neutre : saisis le porc <strong>2–3 minutes</strong> en remuant sans arrêt, puis réserve.",
+        "Dans la même poêle : oignon, poivrons, ail et gingembre émincés, 2 minutes à feu vif. Remets le porc, ajoute 2 c. à soupe de sauce soya et un filet d'huile de sésame en tout dernier — elle perd son parfum si elle chauffe trop longtemps. Sers sur le riz, parsemé d'oignon vert."
+      ]
+    },
+    {
+      "t": "Mardi midi — Restes du sauté de porc sur riz",
+      "s": [
+        "Réchauffe le reste du sauté de porc et le riz à la poêle ou au micro-ondes.",
+        "Sers avec un reste de carottes ou de concombre."
+      ]
+    },
+    {
+      "t": "Mardi — Riz frit cantonais",
+      "s": [
+        "Bats deux œufs, brouille-les rapidement à part dans un peu d'huile, réserve en morceaux grossiers.",
+        "Poivrons, carottes et oignon vert en petits dés, sautés à feu vif <strong>2 minutes</strong> — ils doivent rester croquants.",
+        "Ajoute le riz de lundi <strong>froid</strong> (jamais chaud, il collerait) en l'écrasant un peu pour séparer les grains ; laisse-le griller sans y toucher <strong>1–2 minutes</strong> avant de remuer.",
+        "Remets les œufs, un trait de sauce soya en tout dernier, mélange 30 secondes et sers chaud."
+      ]
+    },
+    {
+      "t": "Mercredi midi — Restes de riz frit",
+      "s": [
+        "Réchauffe le riz frit à la poêle avec un petit filet d'huile, à feu moyen.",
+        "Si le cœur t'en dit, fais un œuf au miroir et dépose-le par-dessus."
+      ]
+    },
+    {
+      "t": "Mercredi — Sole meunière",
+      "s": [
+        "❄️ La sole est vendue surgelée : laisse-la au congélateur jusqu'à hier soir (mardi), puis décongèle-la au frigo pour ce soir — jamais sur le comptoir.",
+        "Éponge bien les filets, sale, poivre, puis une fine couche de farine — c'est la base de la meunière et ce qui donne la croûte dorée.",
+        "Poêle chaude, un peu de beurre : <strong>2 minutes par côté</strong>, pas plus. La sole est mince et sèche vite.",
+        "Retire les filets, jette une noix de beurre frais et le jus d'un demi-citron dans la poêle chaude jusqu'à ce qu'il mousse et blondisse légèrement, puis verse sur le poisson.",
+        "Sers avec du riz et des carottes en rondelles glacées au beurre."
+      ]
+    }
+  ]
+}

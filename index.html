@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Semaine Super C</title>
+<meta name="description" content="Menu de la semaine, liste d'épicerie, conservation et recettes.">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#F2F5EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12160F" media="(prefers-color-scheme: dark)">
+
+<!-- iOS : écran d'accueil -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Semaine">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="weekbar">
+      <div class="weeknav">
+        <button id="prevWeek" class="navbtn" type="button" aria-label="Semaine précédente">‹</button>
+        <select id="weekSelect" aria-label="Choisir la semaine"></select>
+        <button id="nextWeek" class="navbtn" type="button" aria-label="Semaine suivante">›</button>
+      </div>
+      <a class="shopbtn" id="shopBtn" href="https://www.superc.ca/circulaire" target="_blank" rel="noopener">
+        Magasiner sur superc.ca <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <p class="eyebrow" id="eyebrow">—</p>
+    <h1 id="title">Chargement…</h1>
+    <p class="sub" id="intro"></p>
+    <dl class="facts">
+      <div class="fact"><dt>Panier estimé</dt><dd id="factTotal">—</dd></div>
+      <div class="fact"><dt>Portions</dt><dd id="factPortions">—</dd></div>
+      <div class="fact"><dt>Par portion</dt><dd id="factPer">—</dd></div>
+      <div class="fact"><dt>Articles</dt><dd id="factCount">—</dd></div>
+    </dl>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button id="tab-liste" role="tab" aria-controls="panel-liste" aria-selected="true">Liste d'épicerie</button>
+    <button id="tab-menu" role="tab" aria-controls="panel-menu" aria-selected="false">Menu de la semaine</button>
+    <button id="tab-conservation" role="tab" aria-controls="panel-conservation" aria-selected="false">Conservation</button>
+    <button id="tab-recettes" role="tab" aria-controls="panel-recettes" aria-selected="false">Recettes</button>
+  </nav>
+
+  <p class="loaderr" id="loadErr" hidden></p>
+
+  <!-- ============ LISTE ============ -->
+  <section id="panel-liste" role="tabpanel" aria-labelledby="tab-liste">
+    <div id="notesTop"></div>
+    <div id="listRoot"></div>
+    <div id="notesBottom"></div>
+    <div class="totalbar">
+      <div>
+        <div class="lbl">Reste à mettre au panier</div>
+        <div class="big" id="remaining">—</div>
+      </div>
+      <div class="prog" id="progress">—</div>
+      <button class="reset" id="resetBtn" type="button">Tout décocher</button>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section id="panel-menu" role="tabpanel" aria-labelledby="tab-menu" hidden>
+    <div id="menuRoot"></div>
+  </section>
+
+  <!-- ============ CONSERVATION ============ -->
+  <section id="panel-conservation" role="tabpanel" aria-labelledby="tab-conservation" hidden>
+    <h2>Garder chaque protéine dans sa fenêtre de sécurité</h2>
+    <p class="sub" style="margin:-6px 0 20px 0">D'un coup d'œil : ce qu'il faut congeler, décongeler ou cuisiner avant telle date, sans fouiller dans les recettes.</p>
+    <div id="consRoot" class="consgrid"></div>
+  </section>
+
+  <!-- ============ RECETTES ============ -->
+  <section id="panel-recettes" role="tabpanel" aria-labelledby="tab-recettes" hidden>
+    <h2>Les soupers, en bref</h2>
+    <div id="recipeRoot"></div>
+  </section>
+
+  <footer>
+    <p id="footNote"></p>
+    <p class="status">
+      <span id="dataStatus">—</span>
+      <button class="linkbtn" id="refreshBtn" type="button">Actualiser</button>
+    </p>
+  </footer>
+</div>
+
+<div class="toast" id="toast" hidden>
+  <span id="toastText"></span>
+  <button class="toastbtn" id="toastAction" type="button">Recharger</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
