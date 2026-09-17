@@ -98,6 +98,33 @@ Dépôt : `bhattven/semaine-superc` (public, branche `main`).
 GitHub Pages sert `main` à la racine. Un `git push` suffit ; aucun build, aucune action
 à lancer. Compter ~40 s avant que le changement soit visible.
 
+## Installateur Windows
+
+`dist/SemaineSuperC-Setup.exe` (~27 Ko) installe des raccourcis menu Démarrer + Bureau
+qui lancent l'app dans Edge en mode application (`--app=<url>`, fenêtre sans barre
+d'adresse), plus une entrée dans Ajout/Suppression de programmes. Il **n'embarque aucun
+moteur web** : le hors-ligne et les mises à jour de contenu restent assurés par le
+service worker du site, comme pour une installation via le bouton d'Edge.
+
+Reconstruire après un changement de `installer/Setup.cs` ou de l'icône :
+
+```
+powershell -ExecutionPolicy Bypass -File tools\build-installer.ps1
+```
+
+Le compilateur utilisé est le `csc.exe` du .NET Framework livré avec Windows — aucun SDK
+à installer. Arguments acceptés par l'exe : `/uninstall`, `/dry-run`, `/quiet`.
+
+Pièges :
+
+- **L'URL est en dur** dans `Setup.cs` (constante `Url`). Si le dépôt ou le nom Pages
+  change, corriger et recompiler, sinon les raccourcis pointent dans le vide.
+- `Setup.cs` et `build-installer.ps1` doivent rester **encodés en UTF-8 avec BOM** :
+  sans BOM, Windows PowerShell 5.1 et `csc.exe` les lisent en ANSI et les accents
+  cassent le script ou les libellés.
+- L'exe n'est pas signé : SmartScreen peut afficher un avertissement au premier
+  lancement (Informations complémentaires → Exécuter quand même).
+
 ## Super C — ne pas automatiser le panier
 
 Le bouton ouvre simplement la circulaire. Le remplissage automatique du panier sur
