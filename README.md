@@ -1,4 +1,4 @@
-# Semaine Super C
+# FreshMeal
 
 Petite app web installable (PWA) de planification de repas : menu de la semaine, liste
 d'épicerie cochable avec total, conseils de conservation, recettes. Usage personnel.
@@ -10,7 +10,7 @@ d'accueil*. L'app se lance ensuite en plein écran, sans barre de navigateur.
 
 **Windows, au choix :**
 
-- *Le fichier d'installation* — double-cliquer `dist/SemaineSuperC-Setup.exe` (~27 Ko).
+- *Le fichier d'installation* — double-cliquer `dist/FreshMeal-Setup.exe` (~27 Ko).
   Il pose l'icône au menu Démarrer et sur le Bureau, et s'enlève par Ajout/Suppression de
   programmes. Comme il n'est pas signé, SmartScreen peut demander une confirmation au
   premier lancement : *Informations complémentaires* → *Exécuter quand même*.

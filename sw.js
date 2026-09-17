@@ -4,7 +4,7 @@
    Les fichiers data/*.json n'ont PAS besoin d'un bump : ils sont servis
    en réseau-d'abord et se mettent à jour tout seuls. */
 
-var SHELL_VERSION = "v1";
+var SHELL_VERSION = "v2";
 var SHELL_CACHE = "fm-shell-" + SHELL_VERSION;
 var DATA_CACHE = "fm-data";
 var FONT_CACHE = "fm-fonts";

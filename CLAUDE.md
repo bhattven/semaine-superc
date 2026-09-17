@@ -1,4 +1,4 @@
-# Semaine Super C — PWA de planification de repas
+# FreshMeal — PWA de planification de repas
 
 App web installable (iPhone + Windows) qui affiche un menu hebdomadaire, une liste
 d'épicerie cochable, des conseils de conservation et des recettes. Usage strictement
@@ -100,7 +100,7 @@ GitHub Pages sert `main` à la racine. Un `git push` suffit ; aucun build, aucun
 
 ## Installateur Windows
 
-`dist/SemaineSuperC-Setup.exe` (~27 Ko) installe des raccourcis menu Démarrer + Bureau
+`dist/FreshMeal-Setup.exe` (~27 Ko) installe des raccourcis menu Démarrer + Bureau
 qui lancent l'app dans Edge en mode application (`--app=<url>`, fenêtre sans barre
 d'adresse), plus une entrée dans Ajout/Suppression de programmes. Il **n'embarque aucun
 moteur web** : le hors-ligne et les mises à jour de contenu restent assurés par le

@@ -1,4 +1,4 @@
-/* Semaine Super C — coquille d'app. Les données vivent dans data/*.json. */
+/* FreshMeal — coquille d'app. Les données vivent dans data/*.json. */
 (function () {
   "use strict";
 
@@ -57,7 +57,7 @@
   /* ------------------------------------------------------------------ */
 
   function renderHeader(w) {
-    document.title = w.title + " — Semaine Super C";
+    document.title = w.title + " — FreshMeal";
     $("eyebrow").textContent = w.eyebrow || "";
     $("title").textContent = w.title || "";
     $("intro").textContent = w.intro || "";

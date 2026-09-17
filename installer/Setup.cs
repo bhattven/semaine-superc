@@ -1,4 +1,4 @@
-﻿// Installateur de « Semaine Super C » pour Windows.
+﻿// Installateur de « FreshMeal » pour Windows.
 //
 // Ne contient pas de moteur web : il installe une icône, un raccourci au menu
 // Démarrer et sur le Bureau qui lancent l'app en mode application dans Edge
@@ -22,8 +22,8 @@ using Microsoft.Win32;
 
 static class Setup
 {
-    const string AppName = "Semaine Super C";
-    const string AppKey = "SemaineSuperC";
+    const string AppName = "FreshMeal";
+    const string AppKey = "FreshMeal";
     const string Url = "https://bhattven.github.io/semaine-superc/";
     const string Version = "1.0.0";
     const string Publisher = "Usage personnel";

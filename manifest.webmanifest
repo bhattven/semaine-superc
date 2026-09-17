@@ -1,6 +1,6 @@
 {
-  "name": "Semaine Super C",
-  "short_name": "Semaine",
+  "name": "FreshMeal",
+  "short_name": "FreshMeal",
   "description": "Menu de la semaine, liste d'épicerie, conservation et recettes.",
   "lang": "fr-CA",
   "dir": "ltr",

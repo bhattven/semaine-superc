@@ -18,7 +18,7 @@ python tools\make_icons.py icons
 if ($LASTEXITCODE -ne 0) { throw "generation des icones echouee" }
 
 New-Item -ItemType Directory -Force -Path dist | Out-Null
-$out = 'dist\SemaineSuperC-Setup.exe'
+$out = 'dist\FreshMeal-Setup.exe'
 
 & $csc /nologo /target:winexe /platform:anycpu /optimize+ `
     "/out:$out" `
