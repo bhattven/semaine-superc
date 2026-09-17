@@ -1,22 +1,54 @@
 # Brief à coller dans le chat de planification des repas
 
-Ce chat-là n'a pas accès au dépôt et ne peut donc pas modifier l'app. Son rôle est de
-**produire le contenu** ; la publication se fait ensuite dans une session Claude Code
-ouverte dans `G:\Aiproject\FreshMeal`.
+Ce brief donne au chat des repas de quoi publier lui-même dans l'app, via le connecteur
+GitHub de claude.ai.
 
-Coller le texte ci-dessous dans le chat des repas. Il en ressort un bloc JSON, à rapporter
-ici pour publication.
+**Prérequis, à faire une seule fois :** activer le connecteur GitHub dans les paramètres
+de claude.ai, et lui donner accès au dépôt `bhattven/semaine-superc`. Sans ça, le chat ne
+pourra rien écrire et il devrait le dire franchement plutôt que de prétendre avoir publié.
+
+Ensuite, coller tout le texte sous le trait horizontal dans le chat des repas. À refaire
+si la conversation est repartie de zéro.
 
 ---
 
-Le panneau de repas est devenu une app installée (PWA), séparée de l'artifact. Tu ne peux
-plus la mettre à jour en modifiant l'artifact : l'app lit des fichiers JSON dans un dépôt
-auquel tu n'as pas accès. N'essaie donc pas de republier l'artifact pour « pousser » du
-contenu — ça ne l'atteint pas.
+## Comment publier une semaine de repas
 
-À partir de maintenant, quand je te demande une semaine de repas, réponds avec **un seul
-bloc de code JSON** conforme au schéma ci-dessous, et rien d'autre à copier. Je le
-transporterai moi-même vers l'app.
+Le panneau de repas est devenu une app installée sur mon téléphone et mon PC. Elle ne lit
+plus l'artifact : elle lit des fichiers JSON dans le dépôt GitHub `bhattven/semaine-superc`,
+branche `main`. **Modifier l'artifact ne change plus rien à ce que je vois** — ne l'utilise
+plus pour ça.
+
+Quand je te demande une nouvelle semaine, publie-la toi-même dans le dépôt, avec le
+connecteur GitHub, en deux écritures :
+
+**1. Créer `data/<id>.json`** où `<id>` est la date du premier jour de la semaine, au
+format `AAAA-MM-JJ` — par exemple `data/2026-09-24.json`.
+
+**2. Mettre à jour `data/index.json`.** Lis d'abord le fichier existant, ajoute ton entrée
+au tableau `weeks` **sans toucher aux entrées déjà présentes**, et rafraîchis `updated`.
+C'est le piège principal : si tu réécris `index.json` de zéro, les semaines passées
+disparaissent de mon historique.
+
+Commite directement sur `main`, sans passer par une pull request : c'est cette branche qui
+est publiée. Le site se met à jour en moins d'une minute, et l'app affiche la semaine à sa
+prochaine ouverture — je n'ai rien à réinstaller.
+
+### Forme de `data/index.json`
+
+```json
+{
+  "updated": "2026-09-24T14:00:00Z",
+  "weeks": [
+    { "id": "2026-09-17", "from": "2026-09-17", "to": "2026-09-23",
+      "label": "17 – 23 sept. 2026", "title": "Semaine franco-asiatique" },
+    { "id": "2026-09-24", "from": "2026-09-24", "to": "2026-09-30",
+      "label": "24 – 30 sept. 2026", "title": "Titre de la nouvelle semaine" }
+  ]
+}
+```
+
+### Forme d'une semaine
 
 ```json
 {
@@ -58,18 +90,38 @@ transporterai moi-même vers l'app.
 }
 ```
 
-Règles à respecter :
+### Règles
 
-- `id` = la date du **premier jour** de la semaine, format `AAAA-MM-JJ`. `from` = `id`,
-  `to` = le dernier jour.
-- `list[].items[].id` : un identifiant court, unique dans la semaine (c'est la clé des
-  cases à cocher). Réutiliser le même identifiant d'une semaine à l'autre pour un même
+- `id`, `from`, `to` : dates `AAAA-MM-JJ`. `from` est égal à `id`, `to` est le dernier jour
+  de la semaine. Ces trois champs doivent être identiques à ceux de l'entrée d'`index.json`.
+- `list[].items[].id` : identifiant court, **unique dans la semaine** — c'est la clé des
+  cases cochées. Réutiliser le même identifiant d'une semaine à l'autre pour un même
   produit est souhaitable.
-- `price` : un nombre, point décimal (`11.81`, pas `11,81 $`). L'app fait l'affichage en
-  virgule, les sous-totaux par rayon et le grand total — ne pas les calculer.
-- `sp` : `true` si l'article est en spécial cette semaine.
-- `menu[]` : un objet par jour, `midi` et `soir`. `lo` est facultatif et sert d'étiquette
-  (« restes »).
+- `price` : un nombre avec un point décimal (`11.81`), jamais du texte comme `"11,81 $"`.
+  L'app fait l'affichage en virgule, les sous-totaux par rayon et le grand total —
+  ne les calcule pas et ne les écris pas.
+- `sp` : `true` si l'article est en spécial cette semaine, `false` sinon.
+- `unit` : le prix unitaire affiché sous le prix, ou `""`.
+- `menu[]` : un objet par jour, avec `midi` et `soir`. `lo` est facultatif et sert
+  d'étiquette (« restes »).
 - `badge` vaut exactement `"ok"` ou `"freeze"`.
-- Le HTML permis dans les textes se limite à `<strong>`.
-- Pas de virgule finale, pas de commentaire : le JSON doit être valide tel quel.
+- Le seul HTML permis dans les textes est `<strong>`.
+- JSON strict : pas de virgule finale, pas de commentaire.
+
+### Ce à quoi tu ne touches pas
+
+`index.html`, `app.js`, `styles.css`, `sw.js`, `manifest.webmanifest`, `icons/`,
+`installer/`, `tools/`. Ce sont les fichiers de l'app elle-même. Tu n'écris que dans
+`data/`. En particulier, ne touche pas à `SHELL_VERSION` dans `sw.js`.
+
+### Vérifier
+
+Un contrôle automatique tourne à chaque écriture (`tools/validate_data.py`, via GitHub
+Actions). S'il échoue, GitHub m'envoie un courriel et la semaine peut s'afficher en erreur
+dans l'app — corrige alors le fichier.
+
+Après publication, dis-moi simplement quelle semaine tu as publiée et sur quelles dates.
+Je peux la voir ici : https://bhattven.github.io/semaine-superc/
+
+Si le connecteur GitHub n'est pas disponible de ton côté, **dis-le-moi au lieu d'inventer
+une publication** : je passerai par mon autre session pour publier à ta place.

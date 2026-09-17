@@ -1,0 +1,27 @@
+name: Valider le contenu
+
+# Les fichiers de data/ peuvent etre ecrits directement par un agent, sans
+# relecture. Ce garde-fou echoue bruyamment si une semaine est malformee ou
+# oubliee dans l'index — GitHub envoie alors un courriel.
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'tools/validate_data.py'
+      - '.github/workflows/validate-data.yml'
+  pull_request:
+    paths:
+      - 'data/**'
+  workflow_dispatch:
+
+jobs:
+  valider:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Valider data/
+        run: python tools/validate_data.py
